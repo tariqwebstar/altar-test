@@ -1,0 +1,56 @@
+:host() {
+  width: 100%;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 5%;
+}
+
+.timer-section {
+  align-self: flex-end;
+}
+
+.button-section {
+  align-self: flex-end;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ccc;
+}
+
+td {
+  height: 30px;
+  text-align: center;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #c8c5c5;
+}
+
+.matrix-index {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 5px 5px;
+  box-sizing: border-box;
+}
+
+.button {
+  align-items: center;
+  color: #fff;
+  background: #1976d2;
+  border: none;
+  padding: 7px 20px;
+}
