@@ -1,0 +1,25 @@
+<div class="grid-container">
+  <div class="flex-container">
+    <div>
+      <label for="biasInput">Character:</label>
+      <input type="text" id="biasInput" [(ngModel)]="bias" (change)="sendBias(bias)" [disabled]="biasButtonDisabled" />
+    </div>
+    <div class="timer-section">00:00:0{{ timer }}</div>
+    <div class="button-section"><button class="button" (click)="generateGrid()">Generate 2D Grid</button></div>
+  </div>
+
+  <div *ngIf="grid.length">
+    <table>
+      <tbody>
+        <tr>
+          <td></td>
+          <td *ngFor="let x of [].constructor(10); let i = index" class="matrix-index">{{ i }}</td>
+        </tr>
+        <tr *ngFor="let row of grid; let k = index">
+          <td class="matrix-index">{{ k }}</td>
+          <td *ngFor="let char of row">{{ char }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="payments-container">
+  <div class="flex-container">
+    <div class="form-container">
+      <div class="mr-10">
+        <label for="paymentName">Name:</label>
+        <input type="text" id="paymentName" [(ngModel)]="newPayment.name" />
+      </div>
+      <div class="mr-10">
+        <label for="paymentAmount">Amount:</label>
+        <input type="number" id="paymentAmount" [(ngModel)]="newPayment.amount" />
+      </div>
+      <div class="button-container">
+        <button (click)="addPayment()" class="button">+ ADD</button>
+      </div>
+    </div>
+  </div>
+
+  <h2>Payments List:</h2>
+  <table>
+    <thead>
+      <th>Name</th>
+      <th>Amount</th>
+      <th>Code</th>
+      <th>Grid</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let payment of payments">
+        <td>{{ payment.name }}</td>
+        <td>{{ payment.amount }}</td>
+        <td>{{ payment.code }}</td>
+        <td>{{ payment.grid.flat().length }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
